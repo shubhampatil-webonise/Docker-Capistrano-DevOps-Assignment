@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
-set :application, 'Flask-Docker-Capistrano'
+set :application, 'flask-docker-capistrano'
 set :repo_url, 'https://github.com/shubhampatil-webonise/Docker-Capistrano-DevOps-Assignment.git'
 set :branch, 'master'
 # Default branch is :master
