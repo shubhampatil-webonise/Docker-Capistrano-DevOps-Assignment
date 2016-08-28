@@ -1,0 +1,2 @@
+00 00 * * * root /bin/bash $HOME/flask-app/database-backup.sh >> /var/log/flask-docker-db-backup.log 2>&1
+* * * * * root /bin/bash $HOME/flask-app/log-rotation.sh
