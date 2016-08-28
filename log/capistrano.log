@@ -1,0 +1,67 @@
+# Logfile created on 2016-08-29 03:44:23 +0530 by logger.rb/v1.2.7
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-08-29 03:44:23 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b30b2645] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [b30b2645] Command: /usr/bin/env mkdir -p /tmp
+  INFO [b30b2645] Finished in 0.540 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-Flask-Docker-Capistrano-staging-shubham.sh 0.0%
+  INFO Uploading /tmp/git-ssh-Flask-Docker-Capistrano-staging-shubham.sh 100.0%
+  INFO [41c753a1] Running /usr/bin/env chmod 700 /tmp/git-ssh-Flask-Docker-Capistrano-staging-shubham.sh on 127.0.0.1
+ DEBUG [41c753a1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-Flask-Docker-Capistrano-staging-shubham.sh
+  INFO [41c753a1] Finished in 0.009 seconds with exit status 0 (successful).
+  INFO [92e6ba1e] Running /usr/bin/env git ls-remote --heads https://github.com/shubhampatil-webonise/Docker-Capistrano-DevOps-Assignment.git on 127.0.0.1
+ DEBUG [92e6ba1e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Flask-Docker-Capistrano-staging-shubham.sh" ; /usr/bin/env git ls-remote --heads https://github.com/shubhampatil-webonise/Docker-Capistrano-DevOps-Assignment.git )
+ DEBUG [92e6ba1e] 	7b460c0d46a4ad1b6683f05b3db83c2707f7e5a0	refs/heads/master
+  INFO [92e6ba1e] Finished in 1.686 seconds with exit status 0 (successful).
+  INFO [58e22995] Running /usr/bin/env mkdir -p $HOME/Deployement/Flask-Docker-Capistrano/shared $HOME/Deployement/Flask-Docker-Capistrano/releases on 127.0.0.1
+ DEBUG [58e22995] Command: /usr/bin/env mkdir -p $HOME/Deployement/Flask-Docker-Capistrano/shared $HOME/Deployement/Flask-Docker-Capistrano/releases
+  INFO [58e22995] Finished in 0.011 seconds with exit status 0 (successful).
+ DEBUG [1fd52a5c] Running [ -f $HOME/Deployement/Flask-Docker-Capistrano/current/REVISION ] on 127.0.0.1
+ DEBUG [1fd52a5c] Command: [ -f $HOME/Deployement/Flask-Docker-Capistrano/current/REVISION ]
+ DEBUG [1fd52a5c] Finished in 0.007 seconds with exit status 1 (failed).
+ DEBUG [57d4e6b0] Running [ -f $HOME/Deployement/Flask-Docker-Capistrano/repo/HEAD ] on 127.0.0.1
+ DEBUG [57d4e6b0] Command: [ -f $HOME/Deployement/Flask-Docker-Capistrano/repo/HEAD ]
+ DEBUG [57d4e6b0] Finished in 0.009 seconds with exit status 1 (failed).
+ DEBUG [479d7ecc] Running if test ! -d $HOME/Deployement/Flask-Docker-Capistrano; then echo "Directory does not exist '$HOME/Deployement/Flask-Docker-Capistrano'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [479d7ecc] Command: if test ! -d $HOME/Deployement/Flask-Docker-Capistrano; then echo "Directory does not exist '$HOME/Deployement/Flask-Docker-Capistrano'" 1>&2; false; fi
+ DEBUG [479d7ecc] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [4815e6f3] Running /usr/bin/env git clone --mirror https://github.com/shubhampatil-webonise/Docker-Capistrano-DevOps-Assignment.git $HOME/Deployement/Flask-Docker-Capistrano/repo on 127.0.0.1
+ DEBUG [4815e6f3] Command: cd $HOME/Deployement/Flask-Docker-Capistrano && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Flask-Docker-Capistrano-staging-shubham.sh" ; /usr/bin/env git clone --mirror https://github.com/shubhampatil-webonise/Docker-Capistrano-DevOps-Assignment.git $HOME/Deployement/Flask-Docker-Capistrano/repo )
+ DEBUG [4815e6f3] 	Cloning into bare repository '/home/shubham/Deployement/Flask-Docker-Capistrano/repo'...
+  INFO [4815e6f3] Finished in 2.193 seconds with exit status 0 (successful).
+ DEBUG [8244fca4] Running if test ! -d $HOME/Deployement/Flask-Docker-Capistrano/repo; then echo "Directory does not exist '$HOME/Deployement/Flask-Docker-Capistrano/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [8244fca4] Command: if test ! -d $HOME/Deployement/Flask-Docker-Capistrano/repo; then echo "Directory does not exist '$HOME/Deployement/Flask-Docker-Capistrano/repo'" 1>&2; false; fi
+ DEBUG [8244fca4] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [eaea2352] Running /usr/bin/env git remote update --prune on 127.0.0.1
+ DEBUG [eaea2352] Command: cd $HOME/Deployement/Flask-Docker-Capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Flask-Docker-Capistrano-staging-shubham.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [eaea2352] 	Fetching origin
+  INFO [eaea2352] Finished in 1.728 seconds with exit status 0 (successful).
+ DEBUG [002df104] Running if test ! -d $HOME/Deployement/Flask-Docker-Capistrano/repo; then echo "Directory does not exist '$HOME/Deployement/Flask-Docker-Capistrano/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [002df104] Command: if test ! -d $HOME/Deployement/Flask-Docker-Capistrano/repo; then echo "Directory does not exist '$HOME/Deployement/Flask-Docker-Capistrano/repo'" 1>&2; false; fi
+ DEBUG [002df104] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [d593c540] Running /usr/bin/env mkdir -p $HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426 on 127.0.0.1
+ DEBUG [d593c540] Command: cd $HOME/Deployement/Flask-Docker-Capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Flask-Docker-Capistrano-staging-shubham.sh" ; /usr/bin/env mkdir -p $HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426 )
+  INFO [d593c540] Finished in 0.012 seconds with exit status 0 (successful).
+  INFO [b299128f] Running /usr/bin/env git archive master | tar -x -f - -C $HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426 on 127.0.0.1
+ DEBUG [b299128f] Command: cd $HOME/Deployement/Flask-Docker-Capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Flask-Docker-Capistrano-staging-shubham.sh" ; /usr/bin/env git archive master | tar -x -f - -C $HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426 )
+  INFO [b299128f] Finished in 0.014 seconds with exit status 0 (successful).
+ DEBUG [954d6fba] Running if test ! -d $HOME/Deployement/Flask-Docker-Capistrano/repo; then echo "Directory does not exist '$HOME/Deployement/Flask-Docker-Capistrano/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [954d6fba] Command: if test ! -d $HOME/Deployement/Flask-Docker-Capistrano/repo; then echo "Directory does not exist '$HOME/Deployement/Flask-Docker-Capistrano/repo'" 1>&2; false; fi
+ DEBUG [954d6fba] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [dbbab53e] Running /usr/bin/env git rev-list --max-count=1 master on 127.0.0.1
+ DEBUG [dbbab53e] Command: cd $HOME/Deployement/Flask-Docker-Capistrano/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-Flask-Docker-Capistrano-staging-shubham.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [dbbab53e] 	7b460c0d46a4ad1b6683f05b3db83c2707f7e5a0
+ DEBUG [dbbab53e] Finished in 0.009 seconds with exit status 0 (successful).
+ DEBUG [d04d55fc] Running if test ! -d $HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426; then echo "Directory does not exist '$HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [d04d55fc] Command: if test ! -d $HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426; then echo "Directory does not exist '$HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426'" 1>&2; false; fi
+ DEBUG [d04d55fc] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [85e98a82] Running /usr/bin/env echo "7b460c0d46a4ad1b6683f05b3db83c2707f7e5a0" >> REVISION on 127.0.0.1
+ DEBUG [85e98a82] Command: cd $HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426 && /usr/bin/env echo "7b460c0d46a4ad1b6683f05b3db83c2707f7e5a0" >> REVISION
+  INFO [85e98a82] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [6b0f527d] Running /usr/bin/env ln -s $HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426 $HOME/Deployement/Flask-Docker-Capistrano/releases/current on 127.0.0.1
+ DEBUG [6b0f527d] Command: /usr/bin/env ln -s $HOME/Deployement/Flask-Docker-Capistrano/releases/20160828221426 $HOME/Deployement/Flask-Docker-Capistrano/releases/current
+  INFO [6b0f527d] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [9c5f1ab1] Running /usr/bin/env mv $HOME/Deployement/Flask-Docker-Capistrano/releases/current $HOME/Deployement/Flask-Docker-Capistrano on 127.0.0.1
+ DEBUG [9c5f1ab1] Command: /usr/bin/env mv $HOME/Deployement/Flask-Docker-Capistrano/releases/current $HOME/Deployement/Flask-Docker-Capistrano
+  INFO [9c5f1ab1] Finished in 0.006 seconds with exit status 0 (successful).

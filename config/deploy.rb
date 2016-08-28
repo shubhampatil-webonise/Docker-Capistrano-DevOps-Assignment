@@ -40,7 +40,7 @@ namespace :deploy do
 	desc "Build Docker Images"
 	task :docker_build do
 		on roles(:app) do
-			execute "cd #{release-path} && docker build -t #{fetch(:application)} ."
+			execute "cd #{release_path} && docker build -t #{fetch(:application)} ."
 		end
 	end
 
