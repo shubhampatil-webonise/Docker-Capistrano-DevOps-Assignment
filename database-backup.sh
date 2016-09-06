@@ -20,3 +20,5 @@ mongodump -d $DATABASE
 mv dump $BACKUP_NAME
 tar -zcvf $BACKUP_DIR/$BACKUP_NAME.tgz $BACKUP_NAME
 rm -rf $BACKUP_NAME
+
+find $BACKUP_DIR/* -mtime +30 -delete
